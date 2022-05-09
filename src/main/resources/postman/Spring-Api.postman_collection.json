@@ -1,0 +1,1965 @@
+{
+	"info": {
+		"_postman_id": "7c617a05-fdf8-42ba-8139-095aeed20737",
+		"name": "Spring-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "get-products-by-category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRla0BnbWFpbC5jb20iLCJpYXQiOjE2NTE3OTg2MDEsImV4cCI6MTY1MTg4NTAwMX0.IWnTiI8KjP_9e1LdLPyM2y8-SgZwUJE29K8ksdzcvf8_PkjxV0ULMHWYE780RaOOKaQL-CYX8RtoraTLkLsAMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories/10/products?sort=id,dec&page=2&size=25",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"10",
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "id,dec"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "size",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpMTJAbWFpbC5jb20iLCJpYXQiOjE2NTEzNzAwNTksImV4cCI6MTY1MTQ1NjQ1OX0.ezuIRRt-n2YGjjqhOWdryj9gskmGygxCJrfy2xxHAskTEL7s3PGhJnXO9EReUvs-b6xMpxngTsWcKEew8wgvsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRla0BnbWFpbC5jb20iLCJpYXQiOjE2NTEzNzgwNjksImV4cCI6MTY1MTQ2NDQ2OX0.JaNvgZO50fYvGgTWxl61ZOAHHTPB5XJxihxjxmysVJDQvBvl8mJOcVCuqsM2M5tI_gbyX4rfYviQDuf5ny64dg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRvay5tZWhyaTEyQG1haWwuY29tIiwiaWF0IjoxNjUxMzcxMzE1LCJleHAiOjE2NTE0NTc3MTV9.p-nrWtb0DQusXvK2DS1CRx1qsLXPibJNrLuYWyLLeXIWBKl_QzFntu3uszxwzOyJdYEPDn3cHWsg8XGCenmKLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hello world\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hello Worlds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "get-products-by-brand",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIzMDcwLCJleHAiOjE2NTE3MDk0NzB9.fPoQ21VLTg1p4tP6KkLbu9uz74GxJeJoc0aS9-wRDxNE8vJy7l7hs1dtVLGVL-E2-eB0DkGfYLOyuLTbY31FmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/brands/1/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-brands",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-brand",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRvay5tZWhyaTEyQG1haWwuY29tIiwiaWF0IjoxNjUxMzc2MTc4LCJleHAiOjE2NTE0NjI1Nzh9.s2SAIN9SIeAd0KDXSLvjBYZrKsGqxhA5If1mtMzDy_uLUU87FFsjk0pFsS73DWGT5FsFFi3mmCS6UKJ-m9voSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/brands/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-brand",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpMTJAbWFpbC5jb20iLCJpYXQiOjE2NTEzNzYyMjgsImV4cCI6MTY1MTQ2MjYyOH0.enX5QeS6b4tWIHmLrBymPPTxQ2EKDrEX4tQlWO6GdxNJnCBWoUve6qu_NqH3U-gIuKGvbXo5M4AKgaOHMcRBeg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Sdig/Desktop/Only_Laravel/zCapture.PNG"
+								},
+								{
+									"key": "name",
+									"value": "hellotrs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/brands/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-brand",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Sdig/Desktop/PLSQL/Capture.PNG"
+								},
+								{
+									"key": "name",
+									"value": "hellosts",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/brands/26",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-brand",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/brands/26",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "get-roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/roles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/roles/15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roles",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hello world\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/roles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hello worlds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/roles/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/roles/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIxNjc0LCJleHAiOjE2NTE3MDgwNzR9.hU9TSJlqG9hpTeT95YAFDFvyCUuocStItIgwANUrpL75p-6-HOyo6vE7hIS3gq7rqGX-gVx3eJDPYF1gB2K9vg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products?sort=id,desc&size=10000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "id,desc"
+								},
+								{
+									"key": "size",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-by-qrcode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRla0BnbWFpbC5jb20iLCJpYXQiOjE2NTIxMTkzOTksImV4cCI6MTY1MjIwNTc5OX0.y0_ay1XD623XLpkOIJAklQBQ0y0_oltqH84FAWVfTyDQio6hj0o45sZcUUV97MUs06YB1p33ymAl4ReF-4F5-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/qrcode/dujgzduhbwahatwi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"qrcode",
+								"dujgzduhbwahatwi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-suppliers-by-product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/products/2/suppliers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"2",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Sdig/Desktop/Only_Laravel/zCapture.PNG"
+								},
+								{
+									"key": "qrCode",
+									"value": "asasasatf",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "hello worlg",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "brand_id",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attach-supplier-to-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/products/1/suppliers/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1",
+								"suppliers",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "qrCode",
+									"value": "asas",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "hello wordst",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "brand_id",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products/1001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/1001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-supplier-by-product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/1/suppliers/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1",
+								"suppliers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "get-products-by-supplier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/suppliers/1/products?sort=qrCode,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers",
+								"1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "qrCode,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-suppliers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpMTJAbWFpbC5jb20iLCJpYXQiOjE2NTEzNjkzMzcsImV4cCI6MTY1MTQ1NTczN30.u62V_GSkDmRD0oiFLxEBSY9JS2Rkt87TG6r_Mv-cUu8nCwiggG3nfklPmD9HAJagu0Phpd_lyqkU_BXF4MoZlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/suppliers?sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-supplier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/suppliers/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-supplier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  { \r\n    \"name\": \"Gopaljuvxkml\",\r\n    \"phone\": \"(059) 672-50 X133\",\r\n    \"fax\": \"987-71-7465\",\r\n    \"address\": \"0523 Marcel Plaza, Omegaland, AR 34809\",\r\n    \"city\": \"Nnyvfjhncv\",\r\n    \"state\": \"Hrdtdymy\",\r\n    \"zipCode\": \"66704\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/suppliers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-supplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 21,\r\n    \"name\": \"Gopaljuvxkml\",\r\n    \"phone\": \"(059) 672-50 X133\",\r\n    \"fax\": \"987-71-7465\",\r\n    \"address\": \"0523 Marcel Plaza, Omegaland, AR 34809\",\r\n    \"city\": \"Nnyvfjhncv\",\r\n    \"state\": \"Hrdtdymy\",\r\n    \"zipCode\": \"66704\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/suppliers/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/suppliers/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product-by-supplier-id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/suppliers/1/products/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"suppliers",
+								"1",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "get-stores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-staffs-by-store",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores/1/staffs?sort=id,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"1",
+								"staffs"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-products-in-store",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores/2/products?sort=productId,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"2",
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "productId,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-orders-by-store",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores/5/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"5",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-store",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Kmztzdvjqhj\",\r\n        \"phone\": \"(482) 665-6626 X5453\",\r\n        \"email\": \"a72OF10w1M@gmail.com\",\r\n        \"address\": \"Suite 841 6183 Beatty Shoals, Britthaven, IA 62565\",\r\n        \"city\": \"Patrialand\",\r\n        \"state\": \"Oregon\",\r\n        \"zipCode\": \"16536\"\r\n    }"
+						},
+						"url": {
+							"raw": "{{url}}/stores",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-product-to-stock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 20\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/stores/1/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-store",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Kmztzdvjqhj\",\r\n        \"phone\": \"(482) 665-6626 X5453\",\r\n        \"email\": \"a72OF101M@gmail.com\",\r\n        \"address\": \"Suite 841 6183 Beatty Shoals, Britthaven, IA 62565\",\r\n        \"city\": \"Patrialand\",\r\n        \"state\": \"Oregon\",\r\n        \"zipCode\": \"16536\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stores/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product-quantity- in store",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 20\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/stores/1/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-store",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/stores/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product-in-store",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/stores/1/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores",
+								"1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "get-staffs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/staffs?sort=id,desc&size=45",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "id,desc"
+								},
+								{
+									"key": "size",
+									"value": "45"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-staff",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/staffs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-orders-by-staff",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/staffs/1/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs",
+								"1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-staff",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n            \"firstName\": \"Fxvvxjgog\",\r\n            \"lastName\": \"Qynekrkvtqsubxsxf\",\r\n            \"dob\": \"1988-08-31\",\r\n            \"phone\": \"1-068-832-49 X7622\",\r\n            \"hireDate\": \"2010-09-30\",\r\n            \"store\": {\r\n                \"id\" : 1\r\n            }\r\n }"
+						},
+						"url": {
+							"raw": "{{url}}/staffs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-staff",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n            \"firstName\": \"Fxvvxjgog\",\r\n            \"lastName\": \"Qynekrkvtqsubxsxf\",\r\n            \"dob\": \"1977-08-31\",\r\n            \"phone\": \"1-068-832-459 X7622\",\r\n            \"hireDate\": \"1989-09-30\",\r\n            \"store\": {\r\n                \"id\" : 2\r\n            }\r\n }"
+						},
+						"url": {
+							"raw": "{{url}}/staffs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-staff",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/staffs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"staffs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "get-auth-user-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRla0BnbWFpbC5jb20iLCJpYXQiOjE2NTIwNDUzODksImV4cCI6MTY1MjEzMTc4OX0.duKGFR7g1feEkE5scDq1nBpmMuPl-BKnaw1uZyugtPfm8X4NFBq-H2LsAMzfdkPyqtdFLVdppztLldNgfwSzrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/auth/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIxNjc0LCJleHAiOjE2NTE3MDgwNzR9.hU9TSJlqG9hpTeT95YAFDFvyCUuocStItIgwANUrpL75p-6-HOyo6vE7hIS3gq7rqGX-gVx3eJDPYF1gB2K9vg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"staffId\" : 1,\r\n    \"roleId\" : 2,\r\n    \"email\" : \"sadk.mehri@mail.com\",\r\n    \"password\": \"A@2rsdst\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"sadek@gmail.com\",\r\n    \"password\": \"0000\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get-list-orders",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders?sort=storeId,desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "storeId,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-orders-by-name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIzMDcwLCJleHAiOjE2NTE3MDk0NzB9.fPoQ21VLTg1p4tP6KkLbu9uz74GxJeJoc0aS9-wRDxNE8vJy7l7hs1dtVLGVL-E2-eB0DkGfYLOyuLTbY31FmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders/b9e92de6-6a75-41f2-a8b7-4722f72958ad",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"b9e92de6-6a75-41f2-a8b7-4722f72958ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-new-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"staffId\": 1,\r\n        \"storeId\": 5 \r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "process-payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIxNjc0LCJleHAiOjE2NTE3MDgwNzR9.hU9TSJlqG9hpTeT95YAFDFvyCUuocStItIgwANUrpL75p-6-HOyo6vE7hIS3gq7rqGX-gVx3eJDPYF1gB2K9vg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productsId\" : [1, 1],\r\n    \"productsQty\" : [2, 10],\r\n    \"staffId\": 1,\r\n    \"storeId\": 1\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/payments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-payments-info-by-order-Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWRrLm1laHJpQG1haWwuY29tIiwiaWF0IjoxNjUxNjIzMDcwLCJleHAiOjE2NTE3MDk0NzB9.fPoQ21VLTg1p4tP6KkLbu9uz74GxJeJoc0aS9-wRDxNE8vJy7l7hs1dtVLGVL-E2-eB0DkGfYLOyuLTbY31FmA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/payments/orders/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"payments",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
