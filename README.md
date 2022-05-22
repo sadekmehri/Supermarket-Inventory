@@ -100,7 +100,12 @@ First all of all you need to install some prerequesties by following these steps
    cd src\main\resources\schema
    ```
 
-7. Run the project
+7. Import postman json file to test all the end points
+
+   ```sh
+   cd src\main\resources\postman
+   ```
+8. Run the project
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
